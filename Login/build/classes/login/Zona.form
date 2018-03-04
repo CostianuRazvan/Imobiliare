@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="680" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="478" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" pref="49" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Sector5CheckBox" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="PanduriCheckBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="N_13SeptembrieCheckBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AfiCotroceniCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Sector6CheckBox" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="MilitariGorjuluiCheckBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DrumulTabereiMoghiorosCheckBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="PrelungireaGhenceaCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DrumulTabereiPlazzaCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="AlexandrieiCheckBox" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="RahovaCheckBox" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="SebastianCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="CotroceniCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="IzvorCheckBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="KogalniceanuCheckBox" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="CrangasiMetrouCheckBox" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="MilitariPaciiCheckBox" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="GhenceaCheckBox" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="GrozavestiCheckBox" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="DrumulTabereiFavoritCheckBox" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="MilitariRosuCheckBox" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="CrangasiCheckBox" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="MilitariLujeruluiCheckBox" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="DrumulTabereiBuclaCheckBox" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="DrumulTabereiRomancierilorCheckBox" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="145" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="SelecteazaZonaButton" min="-2" pref="142" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <Component id="Sector5CheckBox" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="N_13SeptembrieCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AlexandrieiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CotroceniCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="IzvorCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="PanduriCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RahovaCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="SebastianCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="KogalniceanuCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="AfiCotroceniCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CrangasiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DrumulTabereiRomancierilorCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="Sector6CheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DrumulTabereiMoghiorosCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MilitariLujeruluiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DrumulTabereiBuclaCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="MilitariGorjuluiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CrangasiMetrouCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DrumulTabereiFavoritCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="PrelungireaGhenceaCheckBox" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="MilitariPaciiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="GrozavestiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="DrumulTabereiPlazzaCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="GhenceaCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MilitariRosuCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <Component id="SelecteazaZonaButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="66" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="  Zona"/>
+                <Property name="opaque" type="boolean" value="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="Sector5CheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sector 5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="N_13SeptembrieCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="13 Septembrie"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="N_13SeptembrieCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="PanduriCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Panduri"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="AlexandrieiCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Alexandriei"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="RahovaCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Rahova"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CotroceniCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cotroceni"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="SebastianCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sebastian"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="IzvorCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Izvor"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="KogalniceanuCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Kogalniceanu"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="Sector6CheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sector 6"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="AfiCotroceniCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Afi Cotroceni"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="DrumulTabereiMoghiorosCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drumul Taberei-Moghioros"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="MilitariGorjuluiCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Militari-Gorjului"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CrangasiCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crangasi"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="MilitariLujeruluiCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Militari Lujerului"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="CrangasiMetrouCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crangasi Metrou"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="DrumulTabereiRomancierilorCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drumul Taberei-Romancierilor"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="DrumulTabereiBuclaCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drumul Taberei-Bucla"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="DrumulTabereiFavoritCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drumul Taberei-Favorit"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="PrelungireaGhenceaCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Prelungirea Ghencea"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="DrumulTabereiPlazzaCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drumul Taberei-Plazza"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="MilitariPaciiCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Militari Pacii"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="GhenceaCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ghencea"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="GrozavestiCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Grozavesti"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="MilitariRosuCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Militari Rosu"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="SelecteazaZonaButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Selecteaza Zona"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SelecteazaZonaButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
