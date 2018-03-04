@@ -5,6 +5,13 @@
  */
 package login;
 
+import java.awt.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  *
  * @author Serdin
@@ -16,7 +23,159 @@ public class ZonaCerere extends javax.swing.JFrame {
         initComponents();
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
+    
+    
+    public ZonaCerere(int codCerere,String tipCerere){
+        initComponents();
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        java.sql.Statement stmt = null;
+        try{
+             Class.forName("com.mysql.jdbc.Driver");
 
+       Connection conn = DriverManager.getConnection(
+        "jdbc:mysql://localhost:3306/imobiliare", "razvan", "razvan");
+       // System.out.println("db connected");
+        stmt = (java.sql.Statement) conn.createStatement();
+
+        ResultSet rs1=null;
+       
+        if (tipCerere.equalsIgnoreCase("cumparare")){
+            rs1 = stmt.executeQuery("select Zona from cerereca where CCA="+codCerere+"");
+        }else if (tipCerere.equalsIgnoreCase("inchiriere")){
+            rs1 = stmt.executeQuery("select Zona from cerereia where CIA="+codCerere+"");
+        }
+        String zona="";
+        if (rs1.next()){
+            zona=rs1.getString("Zona");
+        }
+       // String[] listZones=zona.split("[\\s,-]+");
+       String[] listZones=zona.split("[,]+");
+       for (int i=0;i<listZones.length;i++){
+           listZones[i]=listZones[i].replace(" ", "");
+           listZones[i]=listZones[i].replace("-", "");
+       }
+        
+       for (int i=0;i<listZones.length;i++){
+           System.out.println(listZones[i]);
+           if(listZones[i].equalsIgnoreCase("Sector5")){
+               Sector5CheckBox.setSelected(true);
+           }
+           if(listZones[i].equalsIgnoreCase("13Septembrie")){
+               N_13SeptembrieCheckBox.setSelected(true);
+           }
+           if(listZones[i].equalsIgnoreCase("Panduri")){
+               PanduriCheckBox.setSelected(true);
+           }
+           if(listZones[i].equalsIgnoreCase("Alexandriei")){
+               AlexandrieiCheckBox.setSelected(true);
+            }
+           
+            if(listZones[i].equalsIgnoreCase("Rahova")){
+                RahovaCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Cotroceni")){
+                CotroceniCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Sebastian")){
+                SebastianCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Izvor")){
+                IzvorCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Kogalniceanu")){
+                KogalniceanuCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Sector6")){
+                Sector6CheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("AfiCotroceni")){
+                AfiCotroceniCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("DrumulTabereiMoghoros")){
+                DrumulTabereiMoghiorosCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("MilitariGorjului")){
+                MilitariGorjuluiCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("PrelungireaGhencea")){
+                PrelungireaGhenceaCheckBox.setSelected(true);
+            }
+            
+            if(listZones[i].equalsIgnoreCase("DrumulTabereiPlazza")){
+                DrumulTabereiPlazzaCheckBox.setSelected(true);
+            }
+            
+            if(listZones[i].equalsIgnoreCase("Crangasi")){
+                CrangasiCheckBox.setSelected(true);
+            }
+            
+            if(listZones[i].equalsIgnoreCase("MilitariLujerului")){
+                MilitariLujeruluiCheckBox.setSelected(true);
+            }
+
+
+            if(listZones[i].equalsIgnoreCase("CrangasiMetrou")){
+                CrangasiMetrouCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("MilitariPacii")){
+                MilitariPaciiCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Ghencea")){
+                GhenceaCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("DrumulTabereiRomancierilor")){
+                DrumulTabereiRomancierilorCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("DrumulTabereiBucla")){
+                DrumulTabereiBuclaCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("DrumulTabereiFavorit")){
+                DrumulTabereiFavoritCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("Grozavesti")){
+                GrozavestiCheckBox.setSelected(true);
+            }
+
+            if(listZones[i].equalsIgnoreCase("MilitariRosu")){
+                MilitariRosuCheckBox.setSelected(true);
+            }
+           
+           
+           
+       }
+       
+        
+          
+         
+     //   parametru=cca;
+     //  modifica=true;
+        
+        
+        
+       
+     
+       
+        conn.close();
+        }  catch(Exception e){
+            e.printStackTrace();
+        } 
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -3060,7 +3060,12 @@ FileInputStream fis = new FileInputStream(file);
 
         StareLabel.setText("Stare: ");
 
-        StareComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Incorect", "Vandut" }));
+        StareComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Incorect", "Inchiriat" }));
+        StareComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StareComboBoxActionPerformed(evt);
+            }
+        });
 
         StatusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "OK", "De revenit", "Nu colaboreaza" }));
 
@@ -3752,6 +3757,10 @@ FileInputStream fis = new FileInputStream(file);
         
         
     }//GEN-LAST:event_SectorComboBoxActionPerformed
+
+    private void StareComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StareComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StareComboBoxActionPerformed
 
     /**
      * @param args the command line arguments

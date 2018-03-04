@@ -67,6 +67,7 @@ public class CIA extends javax.swing.JFrame {
     int parter;
     int ultimuletaj;
     int parametru;
+    public String zonaVeche;
      
     public CIA(){
         initComponents();
@@ -418,6 +419,8 @@ public class CIA extends javax.swing.JFrame {
              if (z!=null){
               myStmt.setString(9, z.parametru);
               System.out.println(z.parametru);
+             }else{
+                 myStmt.setString(9,zonaVeche);
              }
              myStmt.setInt(10,garsoniera);
             myStmt.setInt(11,metrou);
@@ -571,7 +574,7 @@ public class CIA extends javax.swing.JFrame {
            else if(rs1.getString("Stare").equalsIgnoreCase("Vandut")){
                StareComboBox.setSelectedIndex(2);
            }
-          
+          zonaVeche=rs1.getString("Zona");
           
          
         parametru=cia;
@@ -835,7 +838,7 @@ public class CIA extends javax.swing.JFrame {
 
         jLabel9.setText("Stare:");
 
-        StareComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Incorect", "Vandut" }));
+        StareComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Inchiriat", "Vandut" }));
         StareComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StareComboBoxActionPerformed(evt);
@@ -1237,8 +1240,11 @@ public class CIA extends javax.swing.JFrame {
 
     private void ZonaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZonaButtonActionPerformed
 
+        if (modifica){
+            z=new ZonaCerere(parametru,"inchiriere");
+        }else{
         z= new ZonaCerere();
-        
+        }
         z.setVisible(true);
         System.out.println(z.parametru);
         

@@ -154,15 +154,15 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
                 + "4camerep,I,Ip,II,IIp,III,IIIp,Semidecomandat,Decomandat,Circular,"
                     + "Etaj1,Etaj2,Parter,Ultimul,Stare,Nume,Prenume,Telefon  "
                 + "from cerereca C1,clienti CL"            
-                + " where C1.CCA>=1 and CL.ID=ClientID "
+                + " where C1.CCA>=1 and CL.ID=ClientID and C1.Stare='Actual' "
                 +"UNION ALL "
         +" select C2.CIA as Cod,'CIA' as Tip,Data,ClientID,Pret,Comision,Exclusivitate,"
                 + "Negociabil,ObservatiiPret,TextAnuntIntern,AlteDetalii,Sector,Zona,Metrou,Garsoniera,"
                 + "2camere,3camere,4camere,"
                 + "4camerep,I,Ip,II,IIp,III,IIIp,Semidecomandat,Decomandat,Circular,"
-                    + "Etaj1,Etaj2,Parter,Ultimul,Stare,Nume,Prenume,Telefon  "
+                    + "Etaj1,Etaj2,Parter,Ultimul,Stare,Nume,Prenume,Telefon "
                 + "from cerereia C2,clienti CL"            
-                + " where C2.CIA>=1 and CL.ID=ClientID "
+                + " where C2.CIA>=1 and CL.ID=ClientID C2.Stare='Actual' "
                 + "order by Data desc");
         
        int count=0;
@@ -240,22 +240,22 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
             rs3 = stmt.executeQuery("select C1.CCA as Cod,'CCA' as Tip,Data,ClientID,Pret,"
                     + "Stare,Nume,Prenume,Telefon  "
                 + "from cerereca C1,clienti CL "            
-                + "where C1.CCA>=1 and CL.ID=ClientID "
+                + "where C1.CCA>=1 and CL.ID=ClientID and C1.Stare='Actual' "
                 +"UNION ALL "
         +" select C2.CIA as Cod,'CIA' as Tip,Data,ClientID,Pret,"
                     + "Stare,Nume,Prenume,Telefon  "
                 + "from cerereia C2,clienti CL"            
-                + " where C2.CIA>=1 and CL.ID=ClientID "
+                + " where C2.CIA>=1 and CL.ID=ClientID and C2.Stare='Actual' "
                     +"UNION ALL "+
                     "select O1.OVA as Cod,'OVA' as Tip,Data,ClientID,Pret,"
                 + "O1.Stare,Nume,Prenume,Telefon  "
                 + "from aptvanzare O1,clienti CL"            
-                + " where O1.OVA>=1 and CL.ID=ClientID "
+                + " where O1.OVA>=1 and CL.ID=ClientID and O1.Stare='Actual' "
                 + "UNION ALL "
                 + "select O2.OIA as Cod,'OIA' as Tip,Data,ClientID,Pret,"
-                + "Stare,Nume,Prenume, Telefon  "
+                + "Nume,Prenume, Telefon,Stare "
                 + "from aptinchiriere O2,clienti CL"            
-                + " where O2.OIA>=1 and CL.ID=ClientID "
+                + " where O2.OIA>=1 and CL.ID=ClientID and O2.Stare='Actual' "
                 + "order by Data desc");
         
        int count3=0;
@@ -332,14 +332,14 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
                 ArrayList<ArrayList<Object>> ListaTabelLinii2=new ArrayList<ArrayList<Object>>();
         ResultSet rs2;
         rs2 = stmt.executeQuery("select O.OVA as Cod,'OVA' as Tip,Data,ClientID,Pret,Comision,Exclusivitate,"
-                + "Reper,Camere,Etaj,EtajeTotale,Stare,Status, Nume,Prenume,Telefon,Zona  "
+                + "Reper,Camere,Etaj,EtajeTotale,Status, Nume,Prenume,Telefon,Zona "
                 + "from aptvanzare O,clienti CL"            
-                + " where O.OVA>=1 and CL.ID=ClientID "
+                + " where O.OVA>=1 and CL.ID=ClientID and O.Stare='Actual' "
                 + "UNION ALL "
                 + "select O.OIA as Cod,'OIA' as Tip,Data,ClientID,Pret,Comision,Exclusivitate,"
                 + "Reper,Camere,Etaj,EtajeTotale,Stare,Status, Nume,Prenume, Telefon,Zona  "
                 + "from aptinchiriere O,clienti CL"            
-                + " where O.OIA>=1 and CL.ID=ClientID "
+                + " where O.OIA>=1 and CL.ID=ClientID and O.Stare='Actual' "
                 + "order by Data desc");
         
        int count2=0;
@@ -461,7 +461,7 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
                 + "4camerep,I,Ip,II,IIp,III,IIIp,Semidecomandat,Decomandat,Circular,"
                     + "Etaj1,Etaj2,Parter,Ultimul,Stare,Nume,Prenume,Telefon  "
                 + "from cerereca C1,clienti CL"            
-                + " where C1.CCA>=1 and CL.ID=ClientID and Telefon="+nr
+                + " where C1.CCA>=1 and CL.ID=ClientID and C1.Stare='Actual' and Telefon="+nr
                 +" UNION ALL "
         +" select C2.CIA as Cod,'CIA' as Tip,Data,ClientID,Pret,Comision,Exclusivitate,"
                 + "Negociabil,ObservatiiPret,TextAnuntIntern,AlteDetalii,Sector,Zona,Metrou,Garsoniera,"
@@ -469,7 +469,7 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
                 + "4camerep,I,Ip,II,IIp,III,IIIp,Semidecomandat,Decomandat,Circular,"
                     + "Etaj1,Etaj2,Parter,Ultimul,Stare,Nume,Prenume,Telefon  "
                 + "from cerereia C2,clienti CL"            
-                + " where C2.CIA>=1 and CL.ID=ClientID and Telefon="+nr
+                + " where C2.CIA>=1 and CL.ID=ClientID and C2.Stare='Actual' and Telefon="+nr
                 + " order by Data desc");
         
        int count=0;
@@ -547,22 +547,22 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
             rs3 = stmt.executeQuery("select C1.CCA as Cod,'CCA' as Tip,Data,ClientID,Pret,"
                     + "Stare,Nume,Prenume,Telefon  "
                 + "from cerereca C1,clienti CL "            
-                + "where C1.CCA>=1 and CL.ID=ClientID  and Telefon= "+nr
+                + "where C1.CCA>=1 and CL.ID=ClientID and C1.Stare='Actual' and Telefon= "+nr
                 +" UNION ALL "
         +" select C2.CIA as Cod,'CIA' as Tip,Data,ClientID,Pret,"
                     + "Stare,Nume,Prenume,Telefon  "
                 + "from cerereia C2,clienti CL"            
-                + " where C2.CIA>=1 and CL.ID=ClientID and Telefon= "+nr
+                + " where C2.CIA>=1 and CL.ID=ClientID and C2.Stare='Actual' and Telefon= "+nr
                     +" UNION ALL "+
                     "select O1.OVA as Cod,'OVA' as Tip,Data,ClientID,Pret,"
                 + "O1.Stare,Nume,Prenume,Telefon  "
                 + "from aptvanzare O1,clienti CL"            
-                + " where O1.OVA>=1 and CL.ID=ClientID  and Telefon= "+nr
+                + " where O1.OVA>=1 and CL.ID=ClientID and O1.Stare='Actual'  and Telefon= "+nr
                 + " UNION ALL "
                 + "select O2.OIA as Cod,'OIA' as Tip,Data,ClientID,Pret,"
                 + "Stare,Nume,Prenume, Telefon  "
                 + "from aptinchiriere O2,clienti CL"            
-                + " where O2.OIA>=1 and CL.ID=ClientID  and Telefon= "+nr
+                + " where O2.OIA>=1 and CL.ID=ClientID and O2.Stare='Actual' and Telefon= "+nr
                 + " order by Data desc ");
         
        int count3=0;
@@ -641,12 +641,12 @@ public class MeniuInserare extends javax.swing.JFrame implements DocumentListene
         rs2 = stmt.executeQuery("select O.OVA as Cod,'OVA' as Tip,Data,ClientID,Pret,Comision,Exclusivitate,"
                 + "Reper,Camere,Etaj,EtajeTotale,Stare,Status, Nume,Prenume,Telefon,Zona  "
                 + "from aptvanzare O,clienti CL"            
-                + " where O.OVA>=1 and CL.ID=ClientID and Telefon="+nr
+                + " where O.OVA>=1 and CL.ID=ClientID and O.Stare='Actual'  and Telefon="+nr
                 + " UNION ALL "
                 + "select O.OIA as Cod,'OIA' as Tip,Data,ClientID,Pret,Comision,Exclusivitate,"
                 + "Reper,Camere,Etaj,EtajeTotale,Stare,Status, Nume,Prenume, Telefon,Zona  "
                 + "from aptinchiriere O,clienti CL"            
-                + " where O.OIA>=1 and CL.ID=ClientID and Telefon=" +nr
+                + " where O.OIA>=1 and CL.ID=ClientID and O.Stare='Actual' and Telefon=" +nr
                 + " order by Data desc");
         
        int count2=0;

@@ -2608,10 +2608,13 @@
                   <StringArray count="3">
                     <StringItem index="0" value="Actual"/>
                     <StringItem index="1" value="Incorect"/>
-                    <StringItem index="2" value="Vandut"/>
+                    <StringItem index="2" value="Inchiriat"/>
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StareComboBoxActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>

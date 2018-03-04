@@ -48,6 +48,7 @@ public class detaliiOIA extends javax.swing.JFrame {
      static  ArrayList<BufferedImage> ListaPoze=new ArrayList<BufferedImage>();
      int imagine=0;
      static boolean modificari=false;
+      int pretVechi;
     public detaliiOIA(int OIA) {
         
         initComponents();
@@ -134,6 +135,7 @@ public class detaliiOIA extends javax.swing.JFrame {
              Strada=rs1.getString("Strada");
              int Pret=0;
              Pret=rs1.getInt("Pret");
+             pretVechi=Pret;
              StradaPret.setText("Str."+Strada+" - Pret: "+Pret);
            /*String d=rs1.getString("DescriereEmotionala");
            StringBuffer desc=new StringBuffer(d);
@@ -704,6 +706,11 @@ public class detaliiOIA extends javax.swing.JFrame {
         jLabel33.setText("Stare noua:");
 
         StareNouaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Incorect", "Vandut" }));
+        StareNouaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StareNouaComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel34.setBackground(new java.awt.Color(255, 255, 0));
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -1176,9 +1183,13 @@ public class detaliiOIA extends javax.swing.JFrame {
             myStmt = conn.prepareStatement("update aptinchiriere"
                 + " set Pret=?, Stare=? "
                 + " where OIA=?");
-
+            
             // set params
+            if (!PretNouTextField.getText().equalsIgnoreCase("")){
             myStmt.setInt(1, Integer.parseInt(PretNouTextField.getText()));
+            }else{
+            myStmt.setInt(1, pretVechi);
+            }
             myStmt.setString(2, StareNouaComboBox.getSelectedItem().toString());
             myStmt.setInt(3, this.parametru);
 
@@ -1210,7 +1221,7 @@ public class detaliiOIA extends javax.swing.JFrame {
                 ResultSet rs0;
                 int idclientoferta=0;
 
-                rs0 = stmt.executeQuery("select AdresaCompleta,Status,Comision,SuprafataConstruita,SuprafataUtila,ClientID"
+                rs0 = stmt.executeQuery("select AdresaCompleta,Status,Comision,SuprafataConstruita,SuprafataUtila,ClientID,Stare"
                     + " from aptinchiriere where OIA = "+this.parametru+"");
                 while(rs0.next()){
                     AdresaCompleta.setText(rs0.getString("AdresaCompleta"));
@@ -1218,6 +1229,7 @@ public class detaliiOIA extends javax.swing.JFrame {
                     Comision.setText(rs0.getString("Comision"));
                     Suprafata.setText(rs0.getString("SuprafataConstruita")+rs0.getString("SuprafataUtila"));
                     idclientoferta=rs0.getInt("ClientID");
+                    StareNouaComboBox.setSelectedItem(rs0.getString("Stare"));
                 }
                 ResultSet rs1 = stmt.executeQuery("select CL.Nume,CL.Prenume,CL.Telefon,CL.NumeAgent,CL.Observatii from clienti CL"
                     + " where CL.ID= "+idclientoferta);
@@ -1407,6 +1419,10 @@ public class detaliiOIA extends javax.swing.JFrame {
         new detaliiOIA(parametru).setVisible(true);
 
     }//GEN-LAST:event_AdaugaPozaActionPerformed
+
+    private void StareNouaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StareNouaComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StareNouaComboBoxActionPerformed
 
     
     

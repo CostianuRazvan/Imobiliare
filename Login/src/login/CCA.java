@@ -18,10 +18,12 @@ import javax.swing.JOptionPane;
  */
 public class CCA extends javax.swing.JFrame {
 
+   // int cca;
     static String adresa=null;
      boolean modifica=false;
     Connection conn;
     ZonaCerere z;
+    String zonaVeche;
     int nr=0;
     static int p=0;
     int exclusivitate;
@@ -389,6 +391,8 @@ public class CCA extends javax.swing.JFrame {
              if (z!=null){
               myStmt.setString(9, z.parametru);
               System.out.println(z.parametru);
+             }else{
+                 myStmt.setString(9,zonaVeche);
              }
              myStmt.setInt(10,garsoniera);
             myStmt.setInt(11,metrou);
@@ -544,7 +548,8 @@ public class CCA extends javax.swing.JFrame {
                StareComboBox.setSelectedIndex(2);
            }
           
-          
+          zonaVeche=rs1.getString("Zona");
+          System.out.println(zonaVeche);
          
         parametru=cca;
        modifica=true;
@@ -1201,8 +1206,11 @@ public class CCA extends javax.swing.JFrame {
 
     private void ZonaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZonaButtonActionPerformed
 
+        if (modifica){
+            z=new ZonaCerere(parametru,"cumparare");
+        }else{
         z= new ZonaCerere();
-
+        }
         z.setVisible(true);
         System.out.println(z.parametru);
 

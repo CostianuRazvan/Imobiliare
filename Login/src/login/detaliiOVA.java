@@ -56,6 +56,7 @@ public class detaliiOVA extends javax.swing.JFrame {
      static  ArrayList<BufferedImage> ListaPoze=new ArrayList<BufferedImage>();
      int imagine=0;
      static boolean modificari=false;
+     int pretVechi;
     
     
      public static BufferedImage  byteArrayToImage(byte[] bytes){  
@@ -1098,7 +1099,7 @@ public class detaliiOVA extends javax.swing.JFrame {
        ResultSet rs0;
        int idclientoferta=0;
         
-       rs0 = stmt.executeQuery("select AdresaCompleta,Status,Comision,SuprafataConstruita,SuprafataUtila,ClientID"
+       rs0 = stmt.executeQuery("select AdresaCompleta,Status,Comision,SuprafataConstruita,SuprafataUtila,ClientID,Stare"
                + " from aptvanzare where OVA = "+this.parametru+"");
        while(rs0.next()){
            AdresaCompleta.setText(rs0.getString("AdresaCompleta"));
@@ -1106,6 +1107,7 @@ public class detaliiOVA extends javax.swing.JFrame {
            Comision.setText(rs0.getString("Comision"));
            Suprafata.setText(rs0.getString("SuprafataConstruita")+rs0.getString("SuprafataUtila")); 
            idclientoferta=rs0.getInt("ClientID");
+           StareNouaComboBox.setSelectedItem(rs0.getString("Stare"));
        }
        ResultSet rs1 = stmt.executeQuery("select CL.Nume,CL.Prenume,CL.Telefon,CL.NumeAgent,CL.Observatii from clienti CL"
                    + " where CL.ID= "+idclientoferta);   
@@ -1334,7 +1336,12 @@ public class detaliiOVA extends javax.swing.JFrame {
 					+ " where OVA=?");
 			
 			// set params
+                        
+                        if (!PretNouTextField.getText().equalsIgnoreCase("")){
                         myStmt.setInt(1, Integer.parseInt(PretNouTextField.getText()));
+                         }else{
+                            myStmt.setInt(1, pretVechi);
+                        }
 			myStmt.setString(2, StareNouaComboBox.getSelectedItem().toString());
 			myStmt.setInt(3, this.parametru);
 			
