@@ -838,7 +838,7 @@ public class CIA extends javax.swing.JFrame {
 
         jLabel9.setText("Stare:");
 
-        StareComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Inchiriat", "Vandut" }));
+        StareComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Actual", "Incorect", "Inchiriat" }));
         StareComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StareComboBoxActionPerformed(evt);
