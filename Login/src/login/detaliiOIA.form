@@ -100,7 +100,7 @@
                                       <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jLabel25" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel26" alignment="0" pref="87" max="32767" attributes="0"/>
+                                          <Component id="jLabel26" alignment="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jLabel27" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jLabel28" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jLabel29" alignment="0" max="32767" attributes="0"/>
@@ -576,7 +576,7 @@
                                               <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jLabel14" alignment="1" max="32767" attributes="0"/>
                                               <Component id="jLabel13" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel12" alignment="0" pref="96" max="32767" attributes="0"/>
+                                              <Component id="jLabel12" alignment="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">

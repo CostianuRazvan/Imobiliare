@@ -52,6 +52,7 @@ public class detaliiOIA extends javax.swing.JFrame {
     public detaliiOIA(int OIA) {
         
         initComponents();
+        ListaPoze.clear();
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         jScrollPane2.getVerticalScrollBar().setUnitIncrement(16);
