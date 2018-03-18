@@ -131,6 +131,7 @@ public class CIA extends javax.swing.JFrame {
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             this.PretLabel.setForeground(Color.red);
@@ -260,6 +261,7 @@ public class CIA extends javax.swing.JFrame {
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             JOptionPane.showMessageDialog(CIA.this,"Va rugam sa introduceti primul etaj valid","Error Message",JOptionPane.ERROR_MESSAGE);
@@ -276,6 +278,7 @@ public class CIA extends javax.swing.JFrame {
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             JOptionPane.showMessageDialog(CIA.this,"Va rugam sa introduceti al doilea valid","Error Message",JOptionPane.ERROR_MESSAGE);

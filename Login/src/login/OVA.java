@@ -209,6 +209,7 @@ public class OVA extends javax.swing.JFrame implements DocumentListener{
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             this.PretLabel.setForeground(Color.red);
@@ -289,6 +290,7 @@ public class OVA extends javax.swing.JFrame implements DocumentListener{
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             this.NrLabel.setForeground(Color.red);
@@ -329,6 +331,7 @@ public class OVA extends javax.swing.JFrame implements DocumentListener{
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             this.SuprafataConstruitaLabel.setForeground(Color.red);
@@ -349,6 +352,7 @@ public class OVA extends javax.swing.JFrame implements DocumentListener{
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             this.SuprafataUtilaLabel.setForeground(Color.red);
@@ -371,6 +375,7 @@ public class OVA extends javax.swing.JFrame implements DocumentListener{
             }
             catch(NumberFormatException e){
             flagInt=true;
+            ok=false;
             }
               if(flagInt==true){
             this.AnLabel.setForeground(Color.red);
